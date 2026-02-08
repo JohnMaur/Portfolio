@@ -37,7 +37,9 @@ const App = () => {
       </section>
 
       <section>
-        <Resume />
+        <Resume 
+          isDarkMode={isDarkMode}
+        />
       </section>
     </main>
   )

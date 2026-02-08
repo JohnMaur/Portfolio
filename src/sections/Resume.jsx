@@ -1,98 +1,212 @@
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import ResumeDocument from '../PDF-Layout/ResumeDocument';
 
-const Resume = () => {
+const Resume = ({ isDarkMode }) => {
+  const textPrimary = isDarkMode ? "text-white" : "text-gray-900";
+  const textSecondary = isDarkMode ? "text-gray-300" : "text-gray-700";
+  const borderColor = isDarkMode ? "border-cyan-400" : "border-indigo-400";
+  const accentBg = isDarkMode ? "bg-[#2C1250]" : "bg-purple-600";
+
   return (
-    <div className='sm:px-28 max-sm:px-4 py-11'>
-      <p className='text-white font-palanquin font-bold text-4xl '>ABOUT ME</p>
+    <div className={`sm:px-28 max-sm:px-4 py-11 ${isDarkMode ? "bg-primary" : "bg-gray-100"}`}>
+      
+      {/* ABOUT ME */}
+      <p className={`font-palanquin font-bold text-4xl ${textPrimary}`}>
+        ABOUT ME
+      </p>
 
-      <div className='mt-5 flex flex-col sm:space-x-5'>
-        <div className='sm:w-1/2 max-sm:w-full'>
-          <p className='text-white font-bold font-palanquin text-2xl'>Summary</p>
-          <div className='px-5 pt-2 space-y-3'>
-            <p className='text-xl text-white font-palanquin font-semibold'>JOHN SIGFRIDO MAUR</p>
-            <p className='text-white font-palanquin text-base italic'>I am a passionate developer with nearly two years of hands-on experience from my college days, building innovative and user-friendly mobile apps and web applications. Working with React, React Native, and Node.js, I create dynamic and responsive solutions that meet modern needs.</p>
-            <ul class="list-disc pl-5">
-              <li className='text-white text-base font-palanquin'>Metro Manila, Taguig City, Philippines</li>
-              <li className='text-white text-base font-palanquin'>+639924271714</li>
-              <li className='text-white text-base font-palanquin'>johnmaur8@gmail.com</li>
+      <div className="max-sm:w-full">
+        <div className="px-5 pt-2 space-y-3">
+          <p className={`text-xl font-palanquin font-semibold ${textPrimary}`}>
+            JOHN SIGFRIDO MAUR
+          </p>
+
+          <p className={`font-palanquin text-base italic ${textSecondary}`}>
+            I’m a passionate developer with four years of experience building mobile apps and web applications.
+            I’ve done some freelancing, which helped me improve not only my coding skills but also how I communicate
+            with clients and deliver what they need. I work with React, React Native, and Node.js to create responsive
+            and user-friendly solutions.
+          </p>
+
+          <ul className="list-disc pl-5">
+            <li className={`text-base font-palanquin ${textPrimary}`}>
+              Metro Manila, Taguig City, Philippines
+            </li>
+            <li className={`text-base font-palanquin ${textPrimary}`}>
+              +639924271714
+            </li>
+            <li className={`text-base font-palanquin ${textPrimary}`}>
+              johnmaur8@gmail.com
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="mt-5 flex sm:space-x-5 max-sm:flex-col">
+        
+        {/* LEFT COLUMN */}
+        <div className="sm:w-1/2 max-sm:w-full mt-8">
+          
+          {/* SKILLS */}
+          <p className={`font-palanquin font-bold text-2xl ${textPrimary}`}>
+            Professional Skills
+          </p>
+
+          <div className="flex space-x-4 mt-3">
+            <div className="flex flex-col items-center">
+              <div className={`bg-transparent border-2 ${borderColor} rounded-full w-4 h-4`}></div>
+              <div className={`border-l-2 ${borderColor} h-full`}></div>
+            </div>
+
+            <ul className="list-disc pl-5">
+              <li className={`text-base font-palanquin ${textPrimary}`}>
+                Proficient in both front-end and back-end development using React, React Native, and Node.js.
+              </li>
+              <li className={`text-base font-palanquin ${textPrimary}`}>
+                Skilled in JavaScript and modern programming practices.
+              </li>
+              <li className={`text-base font-palanquin ${textPrimary}`}>
+                Experienced in Git and GitHub for version control and collaboration.
+              </li>
+              <li className={`text-base font-palanquin ${textPrimary}`}>
+                Experienced with Tailwind CSS and Bootstrap for responsive UI design.
+              </li>
             </ul>
-
           </div>
 
-          <p className='text-white font-bold font-palanquin text-2xl mt-8'>Education</p>
+          {/* WORK EXPERIENCE */}
+          <p className={`font-palanquin font-bold text-2xl mt-5 ${textPrimary}`}>
+            Work Experience
+          </p>
 
-          <div className='px-5 pt-2 space-y-6'>
-            <div className='space-y-3'>
-              <div>
-                <p className='text-xl text-white font-palanquin font-semibold'>TERTIARY</p>
-                <p className='px-2 text-white font-semibold font-palanquin text-base'>2021-Present</p>
-              </div>
-              <p className='text-white font-palanquin text-base italic'>TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES</p>
-              <p className='text-white text-base font-palanquin'>Bachelor of Technical Vocational Teacher Education major in ICT-Computer Programming</p>
+          {/* JOB 1 */}
+          <div className="flex space-x-4 mt-3">
+            <div className="flex flex-col items-center mt-2">
+              <div className={`bg-transparent border-2 ${borderColor} rounded-full w-4 h-4`}></div>
+              <div className={`border-l-2 ${borderColor} h-full`}></div>
             </div>
 
-            <div className='space-y-3'>
+            <div className="space-y-3">
               <div>
-                <p className='text-xl text-white font-palanquin font-semibold'>UPPER SECONDARY</p>
-                <p className='px-2 text-white font-semibold font-palanquin text-base'>2019 - 2021</p>
+                <p className={`text-xl font-palanquin font-semibold ${textPrimary}`}>
+                  CUSTOMER SERVICE – PROCTOR
+                </p>
+                <p className={`px-2 font-semibold font-palanquin text-base ${textSecondary}`}>
+                  May 2023 – August 2023
+                </p>
               </div>
-              <p className='text-white font-palanquin text-base italic'>Noah's Academy</p>
-              <p className='text-white text-base font-palanquin'>Information Communicatio Technology</p>
-            </div>
 
-            <div className='space-y-3'>
-              <div>
-                <p className='text-xl text-white font-palanquin font-semibold'>SECONDARY</p>
-                <p className='px-2 text-white font-semibold font-palanquin text-base'>2015 - 2019</p>
-              </div>
-              <p className='text-white font-palanquin text-base italic'>MARIA ASUNCION RODRIGUEZ TINGA HIGH SCHOOL</p>
-            </div>
+              <p className={`font-palanquin text-base italic ${textSecondary}`}>
+                The Peak Tower, Makati City
+              </p>
 
-            <div className='space-y-3'>
-              <div>
-                <p className='text-xl text-white font-palanquin font-semibold'>PRIMARY</p>
-                <p className='px-2 text-white font-semibold font-palanquin text-base'>2009 - 2015</p>
-              </div>
-              <p className='text-white font-palanquin text-base italic'>UPPER BICUTAN ELEMENTARY SCHOOL</p>
+              <ul className="list-disc pl-5">
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Provided clear instructions to test takers.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Resolved technical and procedural issues.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Handled multiple test takers efficiently.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Monitored exams to ensure compliance.
+                </li>
+              </ul>
             </div>
           </div>
 
+          {/* JOB 2 */}
+          <div className="flex space-x-4 mt-3">
+            <div className="flex flex-col items-center mt-2">
+              <div className={`bg-transparent border-2 ${borderColor} rounded-full w-4 h-4`}></div>
+              <div className={`border-l-2 ${borderColor} h-full`}></div>
+            </div>
+
+            <div className="space-y-3">
+              <div>
+                <p className={`text-xl font-palanquin font-semibold ${textPrimary}`}>
+                  Sales Management / Support
+                </p>
+                <p className={`px-2 font-semibold font-palanquin text-base ${textSecondary}`}>
+                  January 2025 – February 2026
+                </p>
+              </div>
+
+              <p className={`font-palanquin text-base italic ${textSecondary}`}>
+                McKinley Hill, Taguig City
+              </p>
+
+              <ul className="list-disc pl-5">
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Supported sales teams and client operations.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Resolved order and service-related issues.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Tracked orders through multiple service stages.
+                </li>
+                <li className={`text-base font-palanquin ${textPrimary}`}>
+                  Prepared reports and documentation.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className='sm:w-1/2 max-sm:w-full mt-4'>
-          <p className='text-white font-palanquin font-bold text-2xl'>Professional Experience</p>
-          <div className='space-y-3 pt-2 px-5'>
-            <div>
-              <p className='text-xl text-white font-palanquin font-semibold'>CUSTOMER SERVICE - PROCTOR</p>
-              <p className='px-2 text-white font-semibold font-palanquin text-base'>May 2023 – August 2023</p>
-            </div>
-            <p className='text-white font-palanquin text-base italic'>The Peak Tower 107 L.P Liveste Street, Makati City</p>
-            <ul class="list-disc pl-5">
-              <li className='text-white text-base font-palanquin'>Provided clear and concise instructions to test takers, ensuring they understood the exam process.</li>
-              <li className='text-white text-base font-palanquin'>Addressed and resolved any technical or procedural issues that arose during exams.</li>
-              <li className='text-white text-base font-palanquin'>Handled two test takers at once while providing consistent and attentive service.</li>
-              <li className='text-white text-base font-palanquin'>Monitored up to 10 test takers during their exams to ensure compliance with exam protocols.</li>
-            </ul>
+        {/* RIGHT COLUMN */}
+        <div className="sm:w-1/2 max-sm:w-full">
+          <p className={`font-bold font-palanquin text-2xl mt-8 ${textPrimary}`}>
+            Education
+          </p>
+
+          <div className="px-5 pt-2 space-y-5">
+            {[
+              ["TERTIARY", "2021–2025", "TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES", "BTVTE – ICT Computer Programming"],
+              ["UPPER SECONDARY", "2019–2021", "Noah's Academy", "Information Communication Technology"],
+              ["SECONDARY", "2015–2019", "Maria Asuncion Rodriguez Tinga High School"],
+              ["PRIMARY", "2009–2015", "Upper Bicutan Elementary School"]
+            ].map(([level, year, school, course], i) => (
+              <div key={i} className="flex space-x-3">
+                <div className="flex flex-col items-center mt-2">
+                  <div className={`bg-transparent border-2 ${borderColor} rounded-full w-4 h-4`}></div>
+                  <div className={`border-l-2 ${borderColor} h-full`}></div>
+                </div>
+                <div>
+                  <p className={`text-xl font-palanquin font-semibold ${textPrimary}`}>{level}</p>
+                  <p className={`px-2 font-semibold font-palanquin text-base ${textSecondary}`}>{year}</p>
+                  <p className={`font-palanquin text-base italic ${textSecondary}`}>{school}</p>
+                  {course && (
+                    <p className={`text-base font-palanquin ${textPrimary}`}>{course}</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className='flex justify-end px-5 py-2 max-sm:mt-4'>
-        <p className='text-gray-300 font-palanquin text-base'>Click 'Download PDF' to download my resume</p>
+      {/* DOWNLOAD */}
+      <div className="flex justify-end px-5 py-2 max-sm:mt-4">
+        <p className={`font-palanquin text-base ${textSecondary}`}>
+          Click 'Download PDF' to download my resume
+        </p>
       </div>
-      <div className='flex justify-end px-5 '>
+
+      <div className="flex justify-end px-5">
         <PDFDownloadLink
           document={<ResumeDocument />}
           fileName="JOHN_MAUR-Resume.pdf"
-          className="text-white bg-[#2C1250] py-2.5 px-9 rounded-md font-palanquin text-base font-semibold hover:bg-[#371765] active:opacity-45"
+          className={`text-white ${accentBg} py-2.5 px-9 rounded-md font-palanquin text-base font-semibold hover:opacity-90 active:opacity-70`}
         >
           {({ loading }) => (loading ? 'Loading Document...' : 'Download PDF')}
         </PDFDownloadLink>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;
