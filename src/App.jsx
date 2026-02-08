@@ -8,14 +8,16 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <main className="h-full w-full bg-primary">
+    <main className={`h-full w-full ${isDarkMode ? "bg-primary" : "bg-gray-100"}`}>
       <Header
         isDarkMode={isDarkMode}
         toggleMode={toggleMode}
       />
 
       <section>
-        <About />
+        <About 
+          isDarkMode={isDarkMode} 
+        />
       </section>
 
       <section>

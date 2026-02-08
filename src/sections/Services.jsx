@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { FaMobileAlt, FaGlobe, FaPaintBrush } from "react-icons/fa";
+import { FaMobileAlt, FaGlobe, FaPaintBrush, FaDatabase, FaServer } from "react-icons/fa";
+import { SiApachespark } from "react-icons/si"; // for API integration icon
 import { Card } from "../components";
 import useOnScreen from "../custom-hook/useOnScreen";
 
@@ -26,7 +27,7 @@ const Services = ({ isDarkMode }) => {
           Services
         </p>
 
-        {/* Mobile */}
+        {/* Mobile Layout */}
         <div className="sm:hidden space-y-5">
           <Card
             isDarkMode={isDarkMode}
@@ -49,10 +50,31 @@ const Services = ({ isDarkMode }) => {
             title="UI / UX Design"
             description="Designing clean, user-friendly, and responsive interfaces that deliver great user experiences."
           />
+          <Card
+            isDarkMode={isDarkMode}
+            degreeAngle="160deg"
+            icon={SiApachespark}
+            title="API Integration"
+            description="Integrating third-party APIs to extend functionality and enhance user experience across platforms."
+          />
+          <Card
+            isDarkMode={isDarkMode}
+            degreeAngle="320deg"
+            icon={FaDatabase}
+            title="Database Design"
+            description="Well-structured, optimized databases with proper schema design using MongoDB and MySQL for fast data access."
+          />
+          <Card
+            isDarkMode={isDarkMode}
+            degreeAngle="160deg"
+            icon={FaServer}
+            title="Full Stack Solution"
+            description="Complete end-to-end web and mobile solutions using React, React Native, and Node.js."
+          />
         </div>
 
-        {/* Desktop */}
-        <div className="max-sm:hidden">
+        {/* Desktop Layout */}
+        <div className="max-sm:hidden space-y-3">
           <div className="flex space-x-3">
             <Card
               isDarkMode={isDarkMode}
@@ -74,6 +96,29 @@ const Services = ({ isDarkMode }) => {
               icon={FaPaintBrush}
               title="UI / UX Design"
               description="Designing clean, user-friendly, and responsive interfaces that deliver great user experiences."
+            />
+          </div>
+          <div className="flex space-x-3">
+            <Card
+              isDarkMode={isDarkMode}
+              degreeAngle="160deg"
+              icon={SiApachespark}
+              title="API Integration"
+              description="Integrating third-party APIs to extend functionality and enhance user experience across platforms."
+            />
+            <Card
+              isDarkMode={isDarkMode}
+              degreeAngle="320deg"
+              icon={FaDatabase}
+              title="Database Design"
+              description="Well-structured, optimized databases with proper schema design using MongoDB and MySQL for fast data access."
+            />
+            <Card
+              isDarkMode={isDarkMode}
+              degreeAngle="160deg"
+              icon={FaServer}
+              title="Full Stack Solution"
+              description="Complete end-to-end web and mobile solutions using React, React Native, and Node.js."
             />
           </div>
         </div>
