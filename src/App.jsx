@@ -19,7 +19,9 @@ const App = () => {
       </section>
 
       <section>
-        <Services />
+        <Services 
+          isDarkMode={isDarkMode}
+        />
       </section>
 
       <section>
