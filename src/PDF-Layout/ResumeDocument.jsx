@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "extrabold",
     color: '#2e74b5',
-    marginTop: 20,
+    marginTop: 16,
   },
   textBold: {
     fontSize: 11,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: '#000000',
     marginBottom: 4,
-  }
+  },
 });
 
 const List = ({ children }) => (
@@ -53,7 +53,7 @@ const List = ({ children }) => (
 );
 
 const ListItem = ({ text }) => (
-  <View style={{ flexDirection:"row" }}>
+  <View style={{ flexDirection: "row" }}>
     <Text style={styles.listItem}>• </Text>
     <Text style={styles.listItem}>{text}</Text>
   </View>
@@ -79,7 +79,7 @@ const ResumeDocument = () => (
         <Text style={styles.sectionTitle}>WORK EXPERIENCE</Text>
         <View style={styles.horizontalLine} />
         <Text style={styles.textBold}>
-          The Peak Tower - <Text style={{ fontWeight: "normal" }}>Liveste Street, Makati City</Text>
+          The Peak Tower - <Text style={{ fontWeight: "normal" }}>Liveste Street, Makati City                                                         May 2023 - August 2023</Text>
         </Text>
         <Text style={styles.textBold}>Customer Service - Proctor</Text>
         <Text style={styles.text}>Responsible for launching exams for test takers while ensuring quality service.</Text>
@@ -89,7 +89,20 @@ const ResumeDocument = () => (
           <ListItem text="Handled two test takers at once while providing consistent and attentive service." />
           <ListItem text="Monitored up to 10 test takers during their exams to ensure compliance with exam protocols." />
         </List>
+        <View style={{ marginBottom: 8 }} />
 
+        <View style={styles.horizontalLine} />
+        <Text style={styles.textBold}>
+          TSD GLOBAL - <Text style={{ fontWeight: "normal" }}>4F 8/10 Mckinley hill Cyberpunk	                                   January 2025 - February 2026</Text>
+        </Text>
+        <Text style={styles.textBold}>Customer Service - Sales Support</Text>
+        <Text style={styles.text}>Responsible for tracking orders through completion while ensuring reliable and efficient service.</Text>
+        <List>
+          <ListItem text="Provide support to sales team by taking on support tasks to reduce workload and allow them to focus on closing deal." />
+          <ListItem text="Address and resolve issues related to orders, services, or client concerns to maintain high customer satisfaction." />
+          <ListItem text="Track, monitor, and follow up on orders to ensure they move smoothly through different services and stages until completion." />
+          <ListItem text="Prepare documentation (order status, issue logs, service tracking) to keep management informed." />
+        </List>
         <Text style={styles.sectionTitle}>PROFESSIONAL SKILLS</Text>
         <View style={styles.horizontalLine} />
         <List>
@@ -110,6 +123,7 @@ const ResumeDocument = () => (
           <ListItem text="Effectively managed classroom dynamics and addressed behavioral issues in a calm and professional manner, showcasing conflict resolution skills." />
         </List>
 
+        <View style={{ marginBottom: 8 }} />
         <Text style={styles.sectionTitle}>ACHIEVEMENTS</Text>
         <View style={styles.horizontalLine} />
         <Text style={styles.textBold}>Certification:</Text>

@@ -25,7 +25,7 @@ const About = ({ isDarkMode }) => {
           />
           <img
             src={arrow}
-            className="absolute h-36 w-h-36 top-[5.1rem] left-60 max-sm:hidden"
+            className="absolute h-36 w-h-36 top-[-1.8rem] left-32 max-sm:hidden"
           />
           <img
             src={profile}
